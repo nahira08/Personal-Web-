@@ -1,11 +1,13 @@
 import CardTop from "@/components/cardTop"
+import Circle from "@/components/gradientCircle";
 import Image from "next/image";
 import { MdOutlineDesignServices } from "react-icons/md";
 
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col sm:flex-row w-[95%] h-fit p-4 sm:w-1/2 mx-auto mt-20">
+      <Circle></Circle>
+      <div className="flex z-10 flex-col sm:flex-row w-[95%] h-fit p-4 sm:w-1/2 mx-auto mt-20">
         <div className="flex flex-col w-full sm:w-[60%]">
           <p className="text-4xl">Hey, I'm Na. 👋</p>
           <p className="mt-3">Welcome to my world. Every line of code, design, and project I develop is a reflection of my passion in this portfolio world.</p>
@@ -15,15 +17,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-[95%] p-4 sm:w-1/2 mx-auto">
+      <div className="w-[95%] z-10 p-4 sm:w-1/2 mx-auto">
         <p className="font-semibold mb-3">About.</p>
         <p className="text-[grey]">
           I craft <span className="text-[white] underline cursor-pointer">digital experiences</span> that are uniquely tailored to your brand and vision. By blending creativity with functionality and embracing the <span className="text-[white] underline cursor-pointer">latest design trends</span>, I ensure every project is both visually striking and <span className="text-white underline cursor-pointer">seamlessly efficient</span>.
         </p>
       </div>
 
-      <div className="flex flex-col sm:gap-2 gap-10 sm:w-1/2 w-[95%] h-auto mb-10 p-4 mx-auto mt-15">
-        <p className="font-semibold mb-3">Work Experience.</p>
+      <div className="flex flex-col sm:gap-2 gap-10 sm:w-1/2 w-[95%] h-auto p-4 mx-auto mt-5">
+        <p className="font-semibold text-lg mb-3">Work Experience.</p>
 
         {/* EXP CARD */}
         {[
@@ -64,7 +66,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col sm:gap-2 gap-10 sm:w-1/2 w-[95%] h-auto mb-10 p-4 mx-auto mt-5">
-        <p className="font-semibold mb-3">Education.</p>
+        <p className="font-semibold text-lg mb-3">Education.</p>
 
         {/* EDU CARD */}
         {[

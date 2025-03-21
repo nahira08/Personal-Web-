@@ -30,19 +30,19 @@ const Main = styled.div`
   }
 
   #c1 {
-    background-color: black;
+    border: 1px solid white;
   }
 
   #c2 {
-    background-color: blue;
+    border: 1px solid white;
   }
 
   #c3 {
-    background-color: red;
+    border: 1px solid white;
   }
 
   #c4 {
-    background-color: green;
+    border: 1px solid white;
   }
 
   &:hover #c1 {
