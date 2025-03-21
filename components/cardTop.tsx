@@ -1,14 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import styled from "styled-components";
 
 export default function CardTop() {
     return (
         <Main className="sm:mb-10 mt-5">
-            <div className="card" id="c1"></div>
-            <div className="card" id="c2"></div>
-            <div className="card" id="c3"></div>
-            <div className="card" id="c4"></div>
+            <div className="card rounded-2xl relative" id="c1"><Image className="rounded-2xl" src={"/kucing1.jpeg"} alt="kucing" fill></Image></div>
+            <div className="card rounded-2xl relative" id="c2"><Image className="rounded-2xl" src={"/kucing2.jpeg"} alt="kucing" fill></Image></div>
+            <div className="card relative rounded-2xl" id="c3"><Image className="rounded-2xl" src={"/kucing3.jpeg"} alt="kucing" fill></Image></div>
+            <div className="card rounded-2xl relative" id="c4"><Image className="rounded-2xl" src={"/kucing4.jpeg"} alt="kucing" fill></Image></div>
         </Main>
     );
 }
@@ -24,7 +25,6 @@ const Main = styled.div`
     background: rgba(211, 211, 211, 0.199);
     position: absolute;
     transition: 0.3s ease-in-out;
-    border-radius: 15px;
     cursor: pointer;
     box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
   }

@@ -1,16 +1,26 @@
+"use client"
+
 import CardTop from "@/components/cardTop"
 import Circle from "@/components/gradientCircle";
 import Image from "next/image";
 import { MdOutlineDesignServices } from "react-icons/md";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, [])
+
   return (
     <>
       <Circle></Circle>
       <div className="flex z-10 flex-col sm:flex-row w-[95%] h-fit p-4 sm:w-1/2 mx-auto mt-20">
         <div className="flex flex-col w-full sm:w-[60%]">
           <p className="text-4xl">Hey, I'm Na. 👋</p>
-          <p className="mt-3">Welcome to my world. Every line of code, design, and project I develop is a reflection of my passion in this portfolio world.</p>
+          <p className="mt-3" data-aos="fade-up">Welcome to my world. Every line of code, design, and project I develop is a reflection of my passion in this portfolio world.</p>
         </div>
         <div className="flex justify-left justify-center items-center w-full mt-3 sm:mt-0 sm:w-[40%]">
           <CardTop></CardTop>
@@ -19,7 +29,7 @@ export default function Home() {
 
       <div className="w-[95%] z-10 p-4 sm:w-1/2 mx-auto">
         <p className="font-semibold mb-3">About.</p>
-        <p className="text-[grey]">
+        <p className="text-[grey]" data-aos="fade-up">
           I craft <span className="text-[white] underline cursor-pointer">digital experiences</span> that are uniquely tailored to your brand and vision. By blending creativity with functionality and embracing the <span className="text-[white] underline cursor-pointer">latest design trends</span>, I ensure every project is both visually striking and <span className="text-white underline cursor-pointer">seamlessly efficient</span>.
         </p>
       </div>
@@ -54,7 +64,7 @@ export default function Home() {
             date: "Jan 2025 - Present",
           },
         ].map((exp, index) => (
-          <div key={index} className="w-full flex sm:mt-3 flex-wrap items-center">
+          <div key={index} data-aos="fade-up" className="w-full flex sm:mt-3 flex-wrap items-center">
             <div className="w-[8%] hidden h-full sm:flex justify-start items-center">{exp.icon}</div>
             <div className="flex flex-col justify-center items-start w-[65%] min-w-0">
               <p className="font-semibold break-words">{exp.title}</p>
@@ -83,7 +93,7 @@ export default function Home() {
             date: "2024-2028",
           },
         ].map((exp, index) => (
-          <div key={index} className="w-full flex sm:mt-3 flex-wrap items-center">
+          <div key={index} data-aos="fade-up" className="w-full flex sm:mt-3 flex-wrap items-center">
             <div className="w-[8%] hidden h-full sm:flex justify-start items-center">{exp.icon}</div>
             <div className="flex flex-col justify-center items-start w-[65%] min-w-0">
               <p className="font-semibold break-words">{exp.title}</p>
