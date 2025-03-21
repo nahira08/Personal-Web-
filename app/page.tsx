@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client"
 
 import CardTop from "@/components/cardTop"
@@ -19,7 +20,7 @@ export default function Home() {
       <Circle></Circle>
       <div className="flex z-10 flex-col sm:flex-row w-[95%] h-fit p-4 sm:w-1/2 mx-auto mt-20">
         <div className="flex flex-col w-full sm:w-[60%]">
-          <p className="text-4xl">Hey, I'm Na. 👋</p>
+          <p className="text-4xl">Hey, I'm Na. {"\u{1F44B}"}</p>
           <p className="mt-3" data-aos="fade-up">Welcome to my world. Every line of code, design, and project I develop is a reflection of my passion in this portfolio world.</p>
         </div>
         <div className="flex justify-left justify-center items-center w-full mt-3 sm:mt-0 sm:w-[40%]">
