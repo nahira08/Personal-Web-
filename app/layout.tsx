@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -7,6 +7,12 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
+const instrumentserif = Instrument_Serif({
+  variable: "--font-ins-serif",
+  subsets: ["latin"],
+  weight: ["400"]
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -14,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${poppins.variable} ${instrumentserif.variable} antialiased`}>
         {children}
       </body>
     </html>

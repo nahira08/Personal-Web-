@@ -9,11 +9,14 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Lanyard from "@/components/lanyard";
+import SosmedCard from "@/components/sosmedCard";
+import Skill from "@/components/skill";
+import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
 
   useEffect(() => {
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 800, once: false });
   }, [])
 
   return (
@@ -21,7 +24,7 @@ export default function Home() {
       <div className="fixed -top-20 -right-10 w-[400] z-[9999]">
         <Lanyard />
       </div>
-
+      <SosmedCard></SosmedCard>
       <Circle></Circle>
       <div className="flex z-10 flex-col sm:flex-row w-[95%] h-fit p-4 sm:w-1/2 mx-auto mt-20">
         <div className="flex flex-col w-full sm:w-[60%]">
@@ -81,7 +84,7 @@ export default function Home() {
         ))}
       </div>
 
-      <div className="flex flex-col sm:gap-2 gap-10 sm:w-1/2 w-[95%] h-auto mb-10 p-4 mx-auto mt-5">
+      <div className="flex flex-col sm:gap-2 gap-10 sm:w-1/2 w-[95%] h-auto p-4 mx-auto mt-5">
         <p className="font-semibold text-lg mb-3">Education.</p>
 
         {/* EDU CARD */}
@@ -110,6 +113,8 @@ export default function Home() {
         ))}
       </div>
 
+      <Skill></Skill>
+      <Portfolio></Portfolio>
     </>
   )
 }
