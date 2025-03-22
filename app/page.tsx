@@ -8,6 +8,7 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Lanyard from "@/components/lanyard";
 
 export default function Home() {
 
@@ -17,6 +18,10 @@ export default function Home() {
 
   return (
     <>
+      <div className="fixed -top-20 -right-10 w-[400] z-[9999]">
+        <Lanyard />
+      </div>
+
       <Circle></Circle>
       <div className="flex z-10 flex-col sm:flex-row w-[95%] h-fit p-4 sm:w-1/2 mx-auto mt-20">
         <div className="flex flex-col w-full sm:w-[60%]">
