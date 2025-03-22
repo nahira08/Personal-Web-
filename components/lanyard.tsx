@@ -1,4 +1,5 @@
-/* eslint-disable react/no-unknown-property */
+/* eslint-disable */
+
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
@@ -284,7 +285,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
                 </RigidBody>
             </group>
             <mesh ref={band}>
-                <meshLineGeometry />
+                <meshLineGeometry/>
                 <meshLineMaterial
                     color="white"
                     depthTest={false}
@@ -295,6 +296,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
                     lineWidth={2}
                 />
             </mesh>
+
         </>
     );
 }
